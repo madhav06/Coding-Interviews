@@ -47,4 +47,32 @@ An object is an instance of a Class. An object consists of: State: Represented b
  print(NITTirchy.estd_date)
 
  print(NITTirchy.courses)
-} ```
+}
+```
+
+## Python supports polymorphism or NOT?
+Yes, Python support polymorphism. Polumorphism can be carried out through inheritance, with sub classes making use of base class methods or overriding them. Two types of polymorphism: --- Overloading --- Overriding
+``` Python3 {
+Example:
+
+class Fish():
+    def swim(self):
+        print("fish swims")
+
+    def swim_backward(self):
+        print("fish can swim backwards")
+
+    def skeleton(self):
+        print("fish skeleton is made of cartilage")
+
+class ClownFish():
+
+    def swim(self):
+        print("the clown fish swims")
+
+af = Fish()
+af.skeleton()
+bf = ClownFish()
+bf.swim()
+
+}```
