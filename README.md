@@ -165,3 +165,5 @@ obj.calculate()
 obj.display()
 }
 ```
+## Where lambda operator will be used in Python3?
+lambda operator or lambda function is a way to create small anonymous functions, functions without a name. These functions are throw-away functions, they are needed where they have been created. They are mainly used in combination with the functions filter(), map() and reduce(). Lambda functions are syntactically restricted to a single expression.
