@@ -37,3 +37,22 @@ class MinStack:
 
 		# returns minimum ele from the stack in constant time
 		def minimum(self):
+			return self.min
+
+
+if __name__ == '__main__':
+
+
+	s = MinStack()
+
+	s.push(6)
+	print(s.minimum())
+
+	s.push(5)
+	print(s.minimum())
+
+	s.push(3)
+	print(s.minimum())
+
+	s.pop()
+	print(s.minimum())
