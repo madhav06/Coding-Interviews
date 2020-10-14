@@ -15,7 +15,7 @@
 # Output: 6
 # asked in: BrowserStack
 
-class SOlution:
+class Solution:
     
     # @param A: integer
     # @return a string
