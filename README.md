@@ -186,4 +186,22 @@ Can you write a program to count the number of digits in a number?
 ## Program to check if a number is a prime number.
 Can you write a program to check if a number is a prime number?
 
-## ...
+Prime Number: Prime numbers are whole numbers greater than 1, that have only two factors - 1 and number itself.
+first few prime numbers are: 2,3,5,7,11,13,17,19,23,29,31,37.
+
+## Program to check if a number is an armstrong number.
+Can you write a program to check if a number is an armstrong number?
+
+Armstrong number: armstrong number is a numner that is equal to the sum of cubes of its digits.
+example: 0, 1, 153, 370, 371, 407
+153 = 1*1*1 + 5*5*5 + 3*3*3
+370 = 3*3*3 + 7*7*7 + 0*0*0
+371 = 3*3*3 + 7*7*7 + 1*1*1
+470 = 4*4*4 + 7*7*7 + 0*0*0
+
+## Program to check if a number is a perfect number.
+Can you write a program to check if a number is a perfect number?
+
+Perfect number: A positive integer that is equal to the sum of its proper divisors.
+example: 6, 28, 496, 8128 etc
+
