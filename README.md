@@ -166,4 +166,24 @@ obj.display()
 }
 ```
 ## Where lambda operator will be used in Python3?
-lambda operator or lambda function is a way to create small anonymous functions, functions without a name. These functions are throw-away functions, they are needed where they have been created. They are mainly used in combination with the functions filter(), map() and reduce(). Lambda functions are syntactically restricted to a single expression.
+Lambda operator or lambda function is a way to create small anonymous functions, functions without a name. These functions are throw-away functions, they are needed where they have been created. They are mainly used in combination with the functions filter(), map() and reduce(). Lambda functions are syntactically restricted to a single expression.
+
+## Program to find average of numbers in a list.
+Can you write a python program to find the average of numbers in a list?
+
+## Program to reverse a number in python.
+Can you write a python program to reverse a number?
+
+## Program to find the sum of the digits of a number in python.
+Can you write a program to find the sum of the digits of a number in python?
+
+## Program to check if a number is palindrome or not.
+Can you write a program to check if a number is a palindrome or not.
+
+## Program to count the number of digits in a number.
+Can you write a program to count the number of digits in a number?
+
+## Program to check if a number is a prime number.
+Can you write a program to check if a number is a prime number?
+
+## ...
