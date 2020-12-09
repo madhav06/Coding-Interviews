@@ -1,5 +1,7 @@
 # Python3
 
+# try this at home again.
+
 # Given a sorted array of integers A(0 based index) of size N, 
 # find the starting and ending position of a given integar B in array A.
 
@@ -49,7 +51,7 @@ class Solution:
 
 
 
-# try this at home again.
+
 
 # Solution 2: 
 
