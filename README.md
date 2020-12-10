@@ -274,13 +274,38 @@ Problem 3: Matched and Mismatched Words
 
 	print(solution(sentence1, sentence2))
 
-<!-- # Expected output: (['The','We','a','are','by','heavy','hit','in','meet','our',
-    'pleased','storm','to','was','you'],
- ['city', 'really']) -->
+# Expected output: (['The','We','a','are','by','heavy','hit','in','meet','our',
+#   'pleased','storm','to','was','you'],
+# ['city', 'really']) 
 }
 ```
 
+Problem 4: Fill The Blanks
 
+``` Python3 {
+	
+	# Given array containing None values fill in None with the most recent
+	# non None value in the array 
+
+	array1 = [1, None, 2, 3, None, None, 5, None]
+
+	def solution(array):
+	    valid = 0
+	    res = []
+
+	    for i in nums:
+	        if i is not None:
+	            res.append(i)
+	            valid = i
+	        else:
+	            res.append(valid)
+	    return res
+
+	solution(array1)
+
+# Expected output: [1, 1, 2, 3, 3, 3, 5, 5]
+}
+```
 
 
 
