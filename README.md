@@ -274,9 +274,9 @@ Problem 3: Matched and Mismatched Words
 
 	print(solution(sentence1, sentence2))
 
-# Expected output: (['The','We','a','are','by','heavy','hit','in','meet','our',
+<!-- # Expected output: (['The','We','a','are','by','heavy','hit','in','meet','our',
     'pleased','storm','to','was','you'],
- ['city', 'really'])
+ ['city', 'really']) -->
 }
 ```
 
