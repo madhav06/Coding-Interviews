@@ -205,3 +205,32 @@ Can you write a program to check if a number is a perfect number?
 Perfect number: A positive integer that is equal to the sum of its proper divisors.
 example: 6, 28, 496, 8128 etc
 
+## Algorithms to solve before python coding round:
+"Knowing how to solve algorithms will give you a competitive advantage during job hunt".
+
+Please note that the solution I shared for each problem is just one of many patential solutions,
+ That could be implemented and therefore feel free to code your own versions.
+
+ Example 1: Average Words Length
+
+``` Python3 {
+	
+	sentence1 = "Hi all, I'm Madhav Nandan, I live in India"
+	sentence2 = "I love this programming thing and I aspire to open my own startup"
+
+	def solution(sentence):
+	    for p in "!?',;.":
+	        sentence = sentence.replace(p, '')
+
+	    words = sentence.split()
+	    return round(sum(len(word) for word in words)/len(words),2)
+
+	print(solution(sentence1))
+	print(solution(sentence2))
+}
+
+# Expected output: 4.2
+# Expected output: 4.08
+```
+```
+
