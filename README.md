@@ -211,7 +211,7 @@ example: 6, 28, 496, 8128 etc
 Please note that the solution I shared for each problem is just one of many patential solutions,
  That could be implemented and therefore feel free to code your own versions.
 
- Example 1: Average Words Length
+ Problem 1: Average Words Length
 
 ``` Python3 {
 	
@@ -227,10 +227,63 @@ Please note that the solution I shared for each problem is just one of many pate
 
 	print(solution(sentence1))
 	print(solution(sentence2))
-}
 
 # Expected output: 4.2
 # Expected output: 4.08
+}
 ```
+
+Probelm 2: Move Zeroes
+
+``` Python3 {
+
+	# Given an array nums, write a fun to move all zeroews to end
+	array1 = [0,1,0,3,12]
+	array2 = [1,7,0,0,8,0,10,12,0,4]
+
+	def solution(nums):
+	    for i in nums:
+	        if 0 in nums:
+	            nums.remove(0)
+	            nums.append(0)
+	    return nums
+
+	solution(array1)
+	solution(array2)
+
+# Expected output: [1,3,12,0,0]
+# Expected output: [1,7,8,10,14,4,0,0,0,0]
+}
 ```
+
+Problem 3: Matched and Mismatched Words
+
+``` Python3 {
+	
+	# Given two sentences, return an array that has words that appear in one sentence,
+	# and not the other and array with the words in common.
+
+	sentence1 = "We are really pleased to meet you in our city"
+	sentence2 = "The city was hit really hard last night by earthquake"
+
+	def solution(sentence1, sentence2):
+	    set1 = set(sentence1.split())
+	    set2 = set(sentence2.split())
+
+	        return sorted(list(set1^set2)), sorted(list(set1&set2))
+
+	print(solution(sentence1, sentence2))
+
+# Expected output: (['The','We','a','are','by','heavy','hit','in','meet','our',
+    'pleased','storm','to','was','you'],
+ ['city', 'really'])
+}
+```
+
+
+
+
+
+
+
 
