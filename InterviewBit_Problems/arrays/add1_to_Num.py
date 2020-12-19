@@ -12,8 +12,6 @@
 
 # as 123 + 1 = 124.
 
-
-
 class Solution:
     # @param A : list of integers
     # @return a list of integers
