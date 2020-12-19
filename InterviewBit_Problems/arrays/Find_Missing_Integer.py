@@ -27,3 +27,4 @@ class Solution:
             initialPosition += 1
         
         return initialPosition
+
