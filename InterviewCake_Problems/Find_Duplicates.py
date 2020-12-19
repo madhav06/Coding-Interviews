@@ -7,8 +7,10 @@
 
 
 
+
 # function to find duplicate
 def findDuplicate(A):
+	A = [1, 2, 5, 7, 7, 9]
 
 	# creating a list visited, if element is seen before mark is visited
 	visited = [False] * (len(A) + 1)
@@ -25,8 +27,8 @@ def findDuplicate(A):
 	# when no duplicates found
 	return -1
 
-if __name__ == '__main__':
+print("Duplicate element is", findDuplicate(A))
+# if __name__ == '__main__':
 
-	A = [1, 2, 5, 7, 7, 9]
 
-	print("Duplicate element is", findDuplicate(A))
+	
