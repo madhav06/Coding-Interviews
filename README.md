@@ -307,6 +307,49 @@ Problem 4: Fill The Blanks
 }
 ```
 
+## Django Framework
+
+#### What is Django framework ?
+
+Django is high-level python Web Framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development. 
+Note: A Web Framework is a collection of tools together in one package that developers can use to build web applications.
+
+#### Features of Django
+
+What is ORM - OBJECT-RELATIONAL-MAPPING, a tool django comes with. Which grealty help us in making database queries.
+
+URL Routing - It help us determining logic based on URL configured.
+
+HTML Templating - Allows us to define and make some presentation logic, insert some dynamic data in our HTML.
+
+Form Handling - A default django features that help us create forms, manage form data and perform validations.
+
+Unit Testing - A standard library module django comes with. This module defines tests using class-based approach.
+
+#### Easiest Way to Install Django
+
+``` Python3 {
+	$ pip3 install django==3.0.3
+}
+```
+
+####  Create a Django project
+
+``` Python 3 {
+	# I have project directory on desktop, so first I navigate to that.
+	# Then ls to make sure it has django-admin, django manage.py etc
+	# Let's follow instructions now.
+
+	$ cd desktop/learning-django
+	$ ls
+	$ django-admin startproject <projectname>
+	$ django-admin startproject wisdompets
+} 
+```
+
+Screenshot:
+
+
 
 
 
