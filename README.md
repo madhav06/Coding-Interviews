@@ -381,6 +381,45 @@ MVC Architecture in Django:
 
 A detailed overview: https://whimsical.com/mvc-architecture-of-django-YDnK7yge5fS68X4Epn6RrU
 
+What is a Django Model: A model is a class inheriting from django.db.models.Model and it defines database fields as class attributes.
+
+``` Python3 {
+	from django.db import models
+
+	class Pet(models.Model):
+	    name = models.CHarField(max_length = 100)
+	    submitter = models.CharField(max_length = 100)
+	    submission_date = models.DateTimeField()
+	    description = models.TextField(blank=True)
+
+}
+```
+
+What migrations do in django ?
+
+Migrations: migrations are responsible for creating the necessary scripts to change this structure through time as we update our code to change our models.
+
+Several cases when a migration is needed:
+
+-- Adding a Model
+-- Adding a Field
+-- Removing a Field
+-- Changing a Field
+
+A migration creates the corresponding database table. migrations are also needed when a field is added, removed or an existing field is changed.
+
+``` Python3 {
+	# Commands for working with migrations are:
+	$ python3 manage.py makemigrations
+	$ python3 manage.py showmigrations
+	$ python3 manage.py migrate
+}
+```
+
+
+
+
+
 
 
 
