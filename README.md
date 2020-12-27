@@ -348,6 +348,7 @@ Unit Testing - A standard library module django comes with. This module defines 
 ```
 
 Screenshot:
+![GitHub](https://github.com/madhav06/projectImages/blob/master/install_django.png)
 
 
 
