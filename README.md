@@ -350,6 +350,12 @@ Unit Testing - A standard library module django comes with. This module defines 
 Screenshot:
 ![GitHub](https://github.com/madhav06/projectImages/blob/master/install_django.png)
 
+Everything you need to know about django core files:
+
+https://whimsical.com/django-project-6n9oC7gMi9cxYf2BX4xGoB
+
+
+
 
 
 
