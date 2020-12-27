@@ -354,6 +354,33 @@ Everything you need to know about django core files:
 
 https://whimsical.com/django-project-6n9oC7gMi9cxYf2BX4xGoB
 
+#### What are Django Apps?
+
+A component in a django project. It is a folder with a set of python files. Each django app supplies a related feature that fits a specific purpose. In overall project, we might have one or many apps.
+
+#### Create a Django app
+
+``` python3 {
+	# make sure you are in <your> project dir such that 
+	# if you 'ls' (list them), you see manage.py
+	$ ls
+	$ manage.py wisdompets
+	#now to create a django app
+	$ python3 manage.py startapp adoptions
+	# this will create a new django app inside your proj
+	# to verify, open VS Code
+	$ code .
+}
+```
+
+In settings.py file, Add in INSTALLED_APPS = ['adoptions' + preinstall as it is]: We add this because we created this new django app and other apps are here because they are pre-installed and they come default with django.
+
+What are the functions 'Pieces of an App' do ? : Here is the link that properly describes what each pieces do: https://whimsical.com/pieces-of-an-app-Rdo8B4sgzaeAKiogXAebT1
+
+MVC Architecture in Django: 
+
+A detailed overview: https://whimsical.com/mvc-architecture-of-django-YDnK7yge5fS68X4Epn6RrU
+
 
 
 
