@@ -416,7 +416,11 @@ A migration creates the corresponding database table. migrations are also needed
 }
 ```
 
+#### When and Why we use Django-Admin ?
 
+The Django admin application can use our models to automatically build a site area that we can use to create, view, update and delete records. This way we can save time a lot and test our models and get a feel for whether we have the right data or not.
+
+The admin application can also be useful for managing data in production, depending on the type of websites. 
 
 
 
