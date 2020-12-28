@@ -422,6 +422,28 @@ The Django admin application can use our models to automatically build a site ar
 
 The admin application can also be useful for managing data in production, depending on the type of websites. 
 
+#### A word on Template Syntax.
+
+Syntax for a template has 3 pieces:
+-- {{ variable }}
+-- {% tag %}
+-- {{ variable | filter }}
+
+``` Python3 {
+	# example of variable,
+	{{variable}} == <h3> {{pet.name}} </h3>
+
+	# example of variable filter,
+	{{variable|filter}} == <h3>{{pet.name | capfirst}} </h3>
+
+	# loopsin templates
+	{% for pet in pets %}
+	    <li> {{ pet.name }} </li>
+	 {% endfor %}
+
+}
+```
+
 
 
 
