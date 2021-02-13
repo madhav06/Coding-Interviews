@@ -20,3 +20,4 @@ class Solution:
             prev = cur
             cur = fut
         return prev
+
