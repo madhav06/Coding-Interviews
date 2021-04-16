@@ -19,4 +19,3 @@ class Solution:
         A.extend(B)
         A.sort()
         return A
-
