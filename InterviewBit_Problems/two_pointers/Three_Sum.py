@@ -18,23 +18,30 @@ class Solution:
     # @return an integer
     def threeSumClosest(self, A, B):
         A.sort()
-        n = len(A)
-        result = float('inf')
+        minn = float('INF')
+        result = -1
 
-        for i in range(0, n-2):
-            left = i + 1
-            right = n - 1
+        for i in range(0, len(A) - 2):
+            a = A[i]
+            start, end = i + 1, len(A) - 1
 
-            while left < right:
-                s = A[i] + A[left] + A[right]
+            while start < end:
+                b, c = A[start], A[end]
 
-                if abs(result - B) > abs(s - B):
-                    result = s
-                if s == B:
+                if abs(B - (a + b + c)) < minn:
+                    minn = abs(B - (a + b + c))
+                    result = a + b + c
+
+                if a + b + c == B:
                     return B
-                if s > B:
-                    right -= 1
-
+                elif a + b + c > B:
+                    end = end - 1
                 else:
-                    left += 1
+                    start = start + 1
         return result
+
+if __name__ == "__main__":
+    s = Solution()
+    A = [-1, 2, 1, -4]
+    print(s.threeSumClosest(A, 1))
+
