@@ -17,21 +17,29 @@ class Solution:
     # @param A : list of integers
     # @return a list of integers
     def plusOne(self, A):
-       
-        if A == [0]:
-            return [1]
-        l = A[::-1] # reverse the list and store
-        
-        l += [0] # increase size by 1
-        x = 1
-        for i in range(len(l)):
-            l[i] += x
-            x = l[i] // 10
-            l[i] = l[i] % 10
-        l = l[::-1]
-        for i in range(len(l)):
-            if l[i] != 0:
-                x = i
+
+        i = len(A) - 1
+        add = 1
+
+        while i >= 0:
+            s = A[i] + add
+
+            add = s // 10
+            A[i] = s % 10
+            i -= 1
+
+            if not add:
                 break
-        return l[i:]
+        else:
+            A.insert(0, 1)
+
+        while A and not A[0]:
+            A.pop(0)
+
+        return A
+
+if __name__ == "__main__":
+    A = [1, 2, 3]
+    s = Solution()
+    print(s.plusOne(A))
             
