@@ -39,6 +39,10 @@ class Solution:
             b = B[-1] if ib == nb else B[ib]
             c = C[-1] if ic == nc else C[ic]
 
+            # ia = A[i]
+            # ib = B[j]
+            # ic = C[k]
+
             res = min(max(abs(a - b), abs(b - c), abs(c - a)), res)
 
             if ia < na and (a <= b or ib == nb) and (a <= c or ic == nc):
