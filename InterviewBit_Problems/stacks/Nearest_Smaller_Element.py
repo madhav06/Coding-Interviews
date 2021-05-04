@@ -1,67 +1,31 @@
-# Python 3 Code
-
-#
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
-'''
-Given an array, find the nearest smaller element G[i] for every element A[i] in the array such that,
- the element has an index smaller than i.
-
-More formally,
-
-    G[i] for an element A[i] = an element A[j] such that 
-    j is maximum possible AND 
-    j < i AND
-    A[j] < A[i]
-Elements for which no smaller element exist, consider next smaller element as -1.
-
-Input Format
-
-The only argument given is integer array A.
-Output Format
-
-Return the integar array G such that G[i] contains nearest smaller number than A[i].
-If no such element occurs G[i] should be -1.
-For Example
-
-Input 1:
-    A = [4, 5, 2, 10, 8]
-Output 1:
-    G = [-1, 4, -1, 2, 2]
-Explaination 1:
-    index 1: No element less than 4 in left of 4, G[1] = -1
-    index 2: A[1] is only element less than A[2], G[2] = A[1]
-    index 3: No element less than 2 in left of 2, G[3] = -1
-    index 4: A[3] is nearest element which is less than A[4], G[4] = A[3]
-    index 4: A[3] is nearest element which is less than A[5], G[5] = A[3]
-    
-Input 2:
-    A = [3, 2, 1]
-Output 2:
-    [-1, -1, -1]
-Explaination 2:
-    index 1: No element less than 3 in left of 3, G[1] = -1
-    index 2: No element less than 2 in left of 2, G[2] = -1
-    index 3: No element less than 1 in left of 1, G[3] = -1
-
-'''
-
-class Solution:
-    # @param A : list of integers
-    # @return a list of integers
-    def prevSmaller(self, A):
-        tmp = -1
-        stack = list()
-        result = list()
-
-        for e in A:
-            if e > tmp:
-                stack.append(e)
-                result.append(tmp)
-            else:
-                while stack and stack[-1] >= e:
-                    stack.pop()
-                result.append(stack[-1] if stack else -1)
-                stack.append(e)
-            tmp = e
-        return result
+# Python3 implementation of efficient
+# algorithm to find smaller element
+# on left side
+import math as mt
+ 
+# Prints smaller elements on left
+# side of every element
+def printPrevSmaller(arr, n):
+ 
+    # Create an empty stack
+    S = list()
+ 
+    # Traverse all array elements
+    for i in range(n):
+     
+        # Keep removing top element from S
+        # while the top element is greater
+        # than or equal to arr[i]
+        while (len(S) > 0 and S[-1] >= arr[i]):
+            S.pop()
+ 
+        # If all elements in S were greater
+        # than arr[i]
+        if (len(S) == 0):
+            print("_, ", end = "")
+        else: # Else print the nearest
+              # smaller element
+            print(S[-1], end = ", ")
+ 
+        # Push this element
+        S.append(arr[i])
