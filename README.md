@@ -444,6 +444,127 @@ Syntax for a template has 3 pieces:
 }
 ```
 
+## Elasticsearch (ELK Stack)
+
+#### what is index in elasticsearch?
+
+An index is like a 'database' in a relational database. It has mapping which defines multiple types.  So, We can rougly think of an index like a database.
+
+**MySQL-->Database-->Tables-->Columns/Rows**
+
+**Elasticsearch -->Indices --> Types --> Documents with Properties**
+
+Elasticsearch cluster can contain multiple Indices(database), which in turn contain multiple Types(tables). These types can have multiple documents(rows), and each documents has properties(columns).
+
+Elasticsearch allows us to query multiple indices at the same time.  Indices are very lightweight data organization mechanisms, so elasticsearch will happily let us create hundreds of indices.
+
+Then, searching and querying take format of:
+**http://localhost:9200/[index]/[type]/[operation]**
+
+#### what are shards in elasticsearch?
+
+A **shard** is a atomic unit of elasticsearch. shards can be thought as single lucene index that can be hosted anywhere in cluster. They are building blocks of elasticsearch and what facilitate its scalability.
+
+We can use shards is our index size is too large it is about to crash. the one solution we can use here is:
+
+We can split up the indices into pieces of shards, allowing us to distribute operations across shards and nodes to improve performance. When creating index we can define actually how many shards we want.
+```
+curl -XPUT localhost:9200/example -d '{
+    "setting": {
+        "index": {
+            "number_of_shards": 2,
+            "number_of_replicas": 1
+        }
+    }
+}'
+```
+#### what are replicas in elasticsearch?
+
+They are fail-safe mechanisms and are basically copies of index's shards. Helpful backup system and a good feature elasticsearch has to offer.
+
+When a node fail or crashes, then adding a replica can help us in increasing search performance.
+The number of replicas can be defined while creating index, however we can change the number of shards anytime after that.
+
+#### When is flask used and when django for web apps?
+
+We use flask for simple projects where we don't need the power/complexity that django offers. Django has template system, ORM and a lot of other good stuffs. Django is used over flask when we want to use a complete, powerful, well documented system that works together very well.
+
+We use flask if we just want to build an API backend without a lot of things that django has to offer, a basic static site or something that is mostly powered by third-party technology.
+
+If the backend is NoSQL - flask use
+For RESTful API - use flask
+Need CMS with feature loded - Use django
+Need limited admin interface - Use django
+
+#### Why is Python integer size bigger than the integer in C?
+
+Unlike C, Python int are objects that use an internal data structure for storage. It's completely different from basic arithmatic types such as int, real numer etc.
+
+for example, whenever Python finds an assignment like **x = 1**, it tries to construct an integer object. This is done using following data structure:
+```
+typedef struct {
+    PyObject_HEAD
+    long ob_ival;
+    
+} PyIntObject;
+```
+#### Mutable, Immutable in Python?
+
+Mutable is fancy way of saying that internal state of object is changed. Immutable doesn't allow any changes in the object once it is created.
+
+Mutable  Objects:
+ **Lists,**
+ **Sets,**
+ **Dictionaries,**
+ **User-Defined Classes**
+ 
+ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ 
+ Immutable Objects:
+ **Strings,**
+ **Tuples,**
+ **Frozen Sets,**
+ **User-Defined Classes***
+ 
+ NOTE: - In Python everything is object. Every object has three attributes.
+ 
+ Identity - This refers to the address that the object refers to in the computer memory
+ 
+ Type - This refers to the kind of object that is created.
+ 
+ Value - This refers to the value stored by the object.
+ 
+ #### Elasticsearch VS MongoDB, which is best suited for distributed enviroment ?
+ 
+ Both these technologies Manage NoSQL data that are highly scalable and have well document-oriented design at the core. 
+ 
+ Elasticsearch is primarily a search server while MongoDB is primarily a database. 
+ 
+ Full-text search is requirement - Elastic is good
+ Look log analytics - Elastic is good
+ Need tokenizer - Elastic is good
+ Maximum document size - 100 MB
+ Written in Java
+ 
+ However, 
+ 
+ Data is NoSQL format - MongoDB is good
+ Need CRUD Op Without Full-text search - MongoDB is good
+ Maximum document size - 16MB
+ Written in C++
+ 
+ #### decorators in python?
+ 
+ A decorator takes in a function, adds some functionality and return it. Very powerful and useful tool in Python sice it allows programmers to modify the behaviour of function or class.
+ 
+ #### Can we use lists in dictionary as key?
+ 
+ A dictionary key must be of type 
+ 
+}
+}
+}
+
 
 
 
