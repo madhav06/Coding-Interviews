@@ -1,20 +1,16 @@
-from catalog.models import Item
+
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+
 
 # Create your views here.
+def catalog(request):
+    context = {}
+    return render(request, 'catalog/catalog.html', context)
 
-class HomeView(ListView):
-    model = Item
-    template_name = 'home.html'
-
-
-
-# def home(request):
-#     return render(request, 'home.html')
-
-def product(request):
-    return render(request, 'product.html')
+def cart(request):
+    context = {}
+    return render(request, 'catalog/cart.html', context)
 
 def checkout(request):
-    return render(request, 'checkout.html')
+    context = {}
+    return render(request, 'catalog/checkout.html', context)
