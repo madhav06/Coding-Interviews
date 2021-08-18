@@ -32,22 +32,31 @@ Follow up:
 from collections import deque
 
 class Solution():
-    def slidingMaximum(self, A, B):
+    def slidingMaximum(self, arr, B):
         """
-        :type nums: List[int]
-        :type k: int
-        :rtype: List[int]
+        A : Array
+        B : Window Size
         """
+        n =len(arr)
         dq = deque()
         max_numbers = []
 
-        for i in range(len(A)):
-            while dq and A[i] >= A[dq[-1]]:
-                dq.pop()
-            dq.append(i)
-            if i >= B and dq and dq[0] <= i - B:
-                dq.popleft()
-            if i >= B - 1:
-                max_numbers.append(A[dq[0]])
+        # Stage 1
+        for i in range(B):
+            while(len(dq) > 0 and arr[dq[-1]] < arr[i]):
+                dq.pop() # remove from rear
+            dq.append(i) # add to rear
+
+        # Stage 2
+        for i in range(B, n):
+            max_numbers.append(arr[dq[0]])
+            while(len(dq) > 0 and dq[0] <= i-B):
+                dq.popleft() # remove from the front
+            while(len(dq) > 0 and arr[dq[-1]] < arr[i]):
+                dq.pop() # remove from rear
+            dq.append(i) # add to rear
+        max_numbers.append(arr[dq[0]])
 
         return max_numbers
+
+    print(slidingMaximum([9,6,11,8,10,5,4,13,93,14], 4))
