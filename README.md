@@ -185,12 +185,12 @@ States are heart of React Components. States can be kept as simple as possible. 
 | Conditions | State | Props |
 | ---------- | ----- | ----- |
 
-1. Receive initial value from parent component | Yes | Yes
-2. Parent component can change value | No | Yes
-3. Set default values inside component | Yes | Yes
-4. Changes inside component | Yes | No
-5. Set initial value for child components | Yes | Yes
-6. Changes inside child components | No | Yes
+| Receive initial value from parent component | Yes | Yes
+| Parent component can change value | No | Yes
+| Set default values inside component | Yes | Yes
+| Changes inside component | Yes | No
+| Set initial value for child components | Yes | Yes
+| Changes inside child components | No | Yes
 
 ## What is ByteCode in Python?
 
