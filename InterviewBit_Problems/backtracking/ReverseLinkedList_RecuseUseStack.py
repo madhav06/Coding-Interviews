@@ -1,3 +1,7 @@
+# Backtracking - if the current solution is not suitable,
+# then eliminate that and backtrack (go back) and
+# check for other solutions.
+
 # Reverse Linked List Recursion Using Stack
 
 # Python code for the above approach
@@ -43,3 +47,6 @@ class Solution:
 # 	while head:
 # 		print(head.val, end=' ')
 # 		head = head.next
+
+
+
