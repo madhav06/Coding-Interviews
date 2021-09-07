@@ -1,16 +1,38 @@
 # Coding-Interviews
+
 Brainstorm coding problems here and questions asked in live Interviews.
 
+## Top 50 React Interview Questions?
+
+React is considered as fastest growing javascript framework. Being a clear winner for front-end developers across the globe, the demand for react developers are increasing exponentially. With all that in mind, here is a set of questions that helpm you nail the react-interview.
+
+#### Difference b/w Real DOM and virtual DOM.
+
+Real DOM - It updates slow. Can directly update HTML. It creates a new DOM if element updates. Here, too much of memory wastage ans the DOM manipulation is very expensive.
+
+Virtual DOM(Document Object Model) - It updates faster. Here we can't update HTML directly. It updates JSX, if element updates. Here, DOM manipulation is easy and no memory wastage as such.
+
+#### What is React, what are its features?
+
+React is frontend JS library developed by FB in 2011. It is used for developing complex and interactive web and mobile UI. It follows the component based approach which helps in building reusable UI components. Has one of the largest community to support.
+
+Featurs:
+Uses Virtual DOM instead of Real DOM. Uses server-side rendering. It follows uni-directional data flow.
+
 ## What is ByteCode in Python?
+
 Let's understand how python runs our programs. Python is usually called an interpreted language, however, it combines compiling and interpreting. When we execute a source code(that is a .py file), python first compiles it into a bytecode. The bytecode is a low-level platform-independent representation of your source code, however, it is not the binary machine code and cannot be run by the target machine directly. In fact, it is a set of instructions for a virtual machine which is called the Python Virtual Machine(PVM). After compilition, the bytecode is sent for execution to the PVM. The PVM is an interpreter that runs the bytecode and is part of the python system. The bytecode is platform-independent. Here, CPython compiles the source code into the bytecode and then this bytecode is executed by the CPython virtual machine.
 
 ## What is difference between SETS and TUPLES?
+
 TUPLES are a datatype that stores values. SETS are another standard dtatype that also store values, The major difference is SETS, unlike TUPLES cannot have multiple occurances of the same element and store unordered values. Moreover, TUPLES are immutable while SETS are mutable.
 
 ## What are python datatype?
+
 Numeric(Integer, Float, COmplex number) type datatypes, Boolean(True, False) type datatypes, Sequence(String, List, Tuple) type datatypes, Dictionary type datatypes. So, mainly 6 std. datatypes: Numeric, String, List, Tuples, Boolean and Dictionary.
 
 ## Why choose Python?
+
 Less Code, Less Time, Less Money: Python typically involves less code, it also takes less time to complete a job. Thankfully for clients this also means less money. It allows developers to work quickly. 2.Utilized by World Leaders: World leading companies are increasingly choosing python. Of course, the vast majority of IT giants, including Google, Dropbox, Spotify are using it. Other industry giants as well choosing python as preferential language: NASA, Disney, Electronic Arts etc.
 Compatible: Python offers compatibility with various platforms and moreover, its free.
 Huge Libraries: There are a lot of libraries for Python. As a result, the developers can manage documentation, databases, web browsers, perform unit testing and so on. Additionally, Python can be used for many taks: web and desktop apps development, complex calculation systems, life support management systems, Internet of Things, games and more.
@@ -18,19 +40,23 @@ Can we add items in tuples dynamically?
 Some tuples(that contain only immutable objects such as strings) are immutable and some other tuples(that contain one or more objects such as lists) are mutable. This is often debatable topic however tuples are immutable in general. You can't add elements to a tuple because of it's immutable property. There is no append() or extend() method for tuples. Similarly, You can't remove elements froma tuple because of it's immutable property. tuples have no remove() or pop() method.
 
 ## Python supports compilition or NOT?
+
 Yes indeed compilation is a step in executing a souce code. Our source code is compiled into bytecode. CPython comiles our source code here.
 
 ## What are Python arrays?
+
 Arrays in python are data structures that can hold multiple values of the same type. Often, they are misinterpreted as lists or Numpy Arrays. Technically, Arrays in Python are distinct from both these. An array is basically a data structures which can hold more than one value, an ordered series of the same type. Arrays are mutable so we can perform various manipulations as required.
 
 Python Arrays and lists store values in a similar way.But, there is a key difference between the two. A list can store any type of values such as integers, strings etc While An array on the other hand, stores single data type values. For example you have array of integers, an array of strings etc.
 
-Arrays in python can be created after importing the array module as follows: import array as arr The array(data type, value list) function takes two parameters, the first being data type of the value stored, the second being the value list. There is another way to import: from array import*
+Arrays in python can be created after importing the array module as follows: import array as arr The array(data type, value list) function takes two parameters, the first being data type of the value stored, the second being the value list. There is another way to import: from array import\*
 
 ## Explain object in Python?
+
 An object is an instance of a Class. An object consists of: State: Represented by attributes of an object. Also reflects the properties of an object. Behaviour: Represented by methods of an object. Also reflects the response of an object with other objects. Identity: Gives unique name to an object to interact with other objects.
 
 ## Example of real-world class in Python?
+
 ```Python3 {
   Class NITTirchy:
       "This is a class"
@@ -51,8 +77,10 @@ An object is an instance of a Class. An object consists of: State: Represented b
 ```
 
 ## Python supports polymorphism or NOT?
+
 Yes, Python support polymorphism. Polumorphism can be carried out through inheritance, with sub classes making use of base class methods or overriding them. Two types of polymorphism: --- Overloading --- Overriding
-``` Python3 {
+
+```Python3 {
 Example:
 
 class Fish():
@@ -79,8 +107,10 @@ bf.swim()
 ```
 
 ## Does Python supports constructor?
+
 Constructors are generally used for instantiating an object. The task of constructors is to initialize to the data members of the class when an object of class is created. In Python the 'init()' method is called as constructor and is always called when an object is created.
-``` Python3 {
+
+```Python3 {
 Syntax:
 
 def __init__(self):
@@ -104,12 +134,13 @@ obj = GeekHour()
 obj.print_Geek()
 }
 ```
+
 Types of constructors:
 default: A simple constructor which doesn't accept any arguments. it's definition has only one arguments which is a reference to the instance being constructed.
 
 parameterized: constructor with parameters is known as parameterized constructor. first args as a reference to the instance being constructed known as self and rest of the arguments are provided by the programmer.
 
-``` Python3 {
+```Python3 {
 # Example of default constructor
 
 class CodingNinja:
@@ -165,31 +196,40 @@ obj.calculate()
 obj.display()
 }
 ```
+
 ## Where lambda operator will be used in Python3?
+
 Lambda operator or lambda function is a way to create small anonymous functions, functions without a name. These functions are throw-away functions, they are needed where they have been created. They are mainly used in combination with the functions filter(), map() and reduce(). Lambda functions are syntactically restricted to a single expression.
 
 ## Program to find average of numbers in a list.
+
 Can you write a python program to find the average of numbers in a list?
 
 ## Program to reverse a number in python.
+
 Can you write a python program to reverse a number?
 
 ## Program to find the sum of the digits of a number in python.
+
 Can you write a program to find the sum of the digits of a number in python?
 
 ## Program to check if a number is palindrome or not.
+
 Can you write a program to check if a number is a palindrome or not.
 
 ## Program to count the number of digits in a number.
+
 Can you write a program to count the number of digits in a number?
 
 ## Program to check if a number is a prime number.
+
 Can you write a program to check if a number is a prime number?
 
 Prime Number: Prime numbers are whole numbers greater than 1, that have only two factors - 1 and number itself.
 first few prime numbers are: 2,3,5,7,11,13,17,19,23,29,31,37.
 
 ## Program to check if a number is an armstrong number.
+
 Can you write a program to check if a number is an armstrong number?
 
 Armstrong number: armstrong number is a numner that is equal to the sum of cubes of its digits.
@@ -200,21 +240,23 @@ example: 0, 1, 153, 370, 371, 407
 470 = 4*4*4 + 7*7*7 + 0*0*0
 
 ## Program to check if a number is a perfect number.
+
 Can you write a program to check if a number is a perfect number?
 
 Perfect number: A positive integer that is equal to the sum of its proper divisors.
 example: 6, 28, 496, 8128 etc
 
 ## Algorithms to solve before python coding round:
+
 "Knowing how to solve algorithms will give you a competitive advantage during job hunt".
 
 Please note that the solution I shared for each problem is just one of many patential solutions,
- That could be implemented and therefore feel free to code your own versions.
+That could be implemented and therefore feel free to code your own versions.
 
- Problem 1: Average Words Length
+Problem 1: Average Words Length
 
-``` Python3 {
-	
+```Python3 {
+
 	sentence1 = "Hi all, I'm Madhav Nandan, I live in India"
 	sentence2 = "I love this programming thing and I aspire to open my own startup"
 
@@ -235,7 +277,7 @@ Please note that the solution I shared for each problem is just one of many pate
 
 Probelm 2: Move Zeroes
 
-``` Python3 {
+```Python3 {
 
 	# Given an array nums, write a fun to move all zeroews to end
 	array1 = [0,1,0,3,12]
@@ -258,8 +300,8 @@ Probelm 2: Move Zeroes
 
 Problem 3: Matched and Mismatched Words
 
-``` Python3 {
-	
+```Python3 {
+
 	# Given two sentences, return an array that has words that appear in one sentence,
 	# and not the other and array with the words in common.
 
@@ -276,16 +318,16 @@ Problem 3: Matched and Mismatched Words
 
 # Expected output: (['The','We','a','are','by','heavy','hit','in','meet','our',
 #   'pleased','storm','to','was','you'],
-# ['city', 'really']) 
+# ['city', 'really'])
 }
 ```
 
 Problem 4: Fill The Blanks
 
-``` Python3 {
-	
+```Python3 {
+
 	# Given array containing None values fill in None with the most recent
-	# non None value in the array 
+	# non None value in the array
 
 	array1 = [1, None, 2, 3, None, None, 5, None]
 
@@ -311,7 +353,7 @@ Problem 4: Fill The Blanks
 
 #### What is Django framework ?
 
-Django is high-level python Web Framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development. 
+Django is high-level python Web Framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development.
 Note: A Web Framework is a collection of tools together in one package that developers can use to build web applications.
 
 #### Features of Django
@@ -328,14 +370,14 @@ Unit Testing - A standard library module django comes with. This module defines 
 
 #### Easiest Way to Install Django
 
-``` Python3 {
+```Python3 {
 	$ pip3 install django==3.0.3
 }
 ```
 
-####  Create a Django project
+#### Create a Django project
 
-``` Python 3 {
+```Python 3 {
 	# I have project directory on desktop, so first I navigate to that.
 	# Then ls to make sure it has django-admin, django manage.py etc
 	# Let's follow instructions now.
@@ -344,7 +386,7 @@ Unit Testing - A standard library module django comes with. This module defines 
 	$ ls
 	$ django-admin startproject <projectname>
 	$ django-admin startproject wisdompets
-} 
+}
 ```
 
 Screenshot:
@@ -360,8 +402,8 @@ A component in a django project. It is a folder with a set of python files. Each
 
 #### Create a Django app
 
-``` python3 {
-	# make sure you are in <your> project dir such that 
+```python3 {
+	# make sure you are in <your> project dir such that
 	# if you 'ls' (list them), you see manage.py
 	$ ls
 	$ manage.py wisdompets
@@ -377,13 +419,13 @@ In settings.py file, Add in INSTALLED_APPS = ['adoptions' + preinstall as it is]
 
 What are the functions 'Pieces of an App' do ? : Here is the link that properly describes what each pieces do: https://whimsical.com/pieces-of-an-app-Rdo8B4sgzaeAKiogXAebT1
 
-MVC Architecture in Django: 
+MVC Architecture in Django:
 
 A detailed overview: https://whimsical.com/mvc-architecture-of-django-YDnK7yge5fS68X4Epn6RrU
 
 What is a Django Model: A model is a class inheriting from django.db.models.Model and it defines database fields as class attributes.
 
-``` Python3 {
+```Python3 {
 	from django.db import models
 
 	class Pet(models.Model):
@@ -408,7 +450,7 @@ Several cases when a migration is needed:
 
 A migration creates the corresponding database table. migrations are also needed when a field is added, removed or an existing field is changed.
 
-``` Python3 {
+```Python3 {
 	# Commands for working with migrations are:
 	$ python3 manage.py makemigrations
 	$ python3 manage.py showmigrations
@@ -420,7 +462,7 @@ A migration creates the corresponding database table. migrations are also needed
 
 The Django admin application can use our models to automatically build a site area that we can use to create, view, update and delete records. This way we can save time a lot and test our models and get a feel for whether we have the right data or not.
 
-The admin application can also be useful for managing data in production, depending on the type of websites. 
+The admin application can also be useful for managing data in production, depending on the type of websites.
 
 #### A word on Template Syntax.
 
@@ -429,7 +471,7 @@ Syntax for a template has 3 pieces:
 -- {% tag %}
 -- {{ variable | filter }}
 
-``` Python3 {
+```Python3 {
 	# example of variable,
 	{{variable}} == <h3> {{pet.name}} </h3>
 
@@ -443,15 +485,3 @@ Syntax for a template has 3 pieces:
 
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
