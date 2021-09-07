@@ -182,8 +182,8 @@ States are heart of React Components. States can be kept as simple as possible. 
 
 #### Difference b/w states and props?
 
-Conditions | State | Props
----------- | **\_** | **\_\_\_**
+| Conditions | State | Props |
+| ---------- | ----- | ----- |
 
 1. Receive initial value from parent component | Yes | Yes
 2. Parent component can change value | No | Yes
