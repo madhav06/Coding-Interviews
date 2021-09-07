@@ -182,15 +182,20 @@ States are heart of React Components. States can be kept as simple as possible. 
 
 #### Difference b/w states and props?
 
-| Conditions | State | Props |
-| ---------- | ----- | ----- |
-
-| Receive initial value from parent component | Yes | Yes
-| Parent component can change value | No | Yes
-| Set default values inside component | Yes | Yes
-| Changes inside component | Yes | No
-| Set initial value for child components | Yes | Yes
-| Changes inside child components | No | Yes
+| Conditions                                  | State | Props |
+| ------------------------------------------- | ----- | ----- |
+| Receive initial value from parent component | Yes   | Yes   |
+| ----------------------                      | ----- | ----- |
+| Parent component can change value           | No    | Yes   |
+| ----------                                  | ----- | ----- |
+| Set default values inside component         | Yes   | Yes   |
+| ----------                                  | ----- | ----- |
+| Changes inside component                    | Yes   | No    |
+| ----------                                  | ----- | ----- |
+| Set initial value for child components      | Yes   | Yes   |
+| ----------                                  | ----- | ----- |
+| Changes inside child components             | No    | Yes   |
+| ----------                                  | ----- | ----- |
 
 ## What is ByteCode in Python?
 
