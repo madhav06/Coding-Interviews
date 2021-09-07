@@ -197,6 +197,38 @@ States are heart of React Components. States can be kept as simple as possible. 
 | Changes inside child components             | No    | Yes   |
 | ------------------------------------------- | ----- | ----- |
 
+#### How you update the state of a component?
+
+can be updated using **this.setState()**
+
+```jsx
+class MyComponent extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "Madhav",
+      id: "101",
+    };
+  }
+  render() {
+    setTimeout(() => {
+      this.setState({ name: "Rehan", id: "222" });
+    }, 2000);
+    return (
+      <div>
+        <h1>Hello {this.state.name}</h1>
+        <h2>Hello {this.state.name}</h2>
+      </div>
+    );
+  }
+}
+ReactDOM.render(<MyComponent />, document.getElementById("content"));
+```
+
+#### What is arrow function in React? How it is used?
+
+Arrow functions are brief syntax for writing the function expression. 'fat arrow(=>) the function'. These allow to bind the context of the components properly in ES6. Mostly used while working with higher order functions.
+
 ## What is ByteCode in Python?
 
 Let's understand how python runs our programs. Python is usually called an interpreted language, however, it combines compiling and interpreting. When we execute a source code(that is a .py file), python first compiles it into a bytecode. The bytecode is a low-level platform-independent representation of your source code, however, it is not the binary machine code and cannot be run by the target machine directly. In fact, it is a set of instructions for a virtual machine which is called the Python Virtual Machine(PVM). After compilition, the bytecode is sent for execution to the PVM. The PVM is an interpreter that runs the bytecode and is part of the python system. The bytecode is platform-independent. Here, CPython compiles the source code into the bytecode and then this bytecode is executed by the CPython virtual machine.
