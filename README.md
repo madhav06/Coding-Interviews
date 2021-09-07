@@ -138,6 +138,60 @@ This Virtual DOM works in three simple steps:
 
 3. Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
 
+#### In React, everything is component. Explain.
+
+Components are the building blocks of React application's UI. These components split up the entire Ui into small independent and resuable pieces. Then, it renders each of these components independent of each other without affecting the rest of the UI.
+
+#### What is the purpose of render( ) in React.
+
+Each React component must have a render( ) as mandatory. It returns a single React element which is the representation of the native DOM component. If more than one HTML element needs to be rendered, then they must be grouped together inside one one enclosing tag such as: <form>, <div>, <group> etc. It must return the same result each time when it is invoked.
+
+#### How to embed two or more components into one?
+
+We can do this following way:
+
+```jsx
+class MyComponent extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello </h1>
+        <Header />
+      </div>
+    );
+  }
+}
+
+class Header extends React.Component {
+  render() {
+    return;
+    <h1>Header Component </h1>;
+  }
+}
+
+ReactDOM.render(<MyComponent />, document.getElementById("content"));
+```
+
+#### What is Props?
+
+Shorthand for Properties in React. They are read-only components which must be kept pure. They are always passed down from the parent to child components throughout the application. **A\*\*** child component can never send a prop back to the parent component. This helps in maintaing uni-directional data flow and generally used to render generated data dynamically.
+
+#### What's State in React.
+
+States are heart of React Components. States can be kept as simple as possible. Basically, States are the objects which determine components rendering and behaviour. They are mutable unlike props and create dynamic components. accessed via this.state( ).
+
+#### Difference b/w states and props?
+
+Conditions | State | Props
+---------- | **\_** | **\_\_\_**
+
+1. Receive initial value from parent component | Yes | Yes
+2. Parent component can change value | No | Yes
+3. Set default values inside component | Yes | Yes
+4. Changes inside component | Yes | No
+5. Set initial value for child components | Yes | Yes
+6. Changes inside child components | No | Yes
+
 ## What is ByteCode in Python?
 
 Let's understand how python runs our programs. Python is usually called an interpreted language, however, it combines compiling and interpreting. When we execute a source code(that is a .py file), python first compiles it into a bytecode. The bytecode is a low-level platform-independent representation of your source code, however, it is not the binary machine code and cannot be run by the target machine directly. In fact, it is a set of instructions for a virtual machine which is called the Python Virtual Machine(PVM). After compilition, the bytecode is sent for execution to the PVM. The PVM is an interpreter that runs the bytecode and is part of the python system. The bytecode is platform-independent. Here, CPython compiles the source code into the bytecode and then this bytecode is executed by the CPython virtual machine.
