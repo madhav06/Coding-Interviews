@@ -19,6 +19,125 @@ React is frontend JS library developed by FB in 2011. It is used for developing 
 Featurs:
 Uses Virtual DOM instead of Real DOM. Uses server-side rendering. It follows uni-directional data flow.
 
+#### Limitations of React
+
+React is just a library, not a full-blown framework. Its library is very large and takes time to understand. Can be difficult for novice programmers to understand. Coding in React is complex as it uses inline templating and JSX.
+
+#### Advantages of Using React
+
+It increases the application performance. Can be conveniently used on the client as well as server side. Code readability is good due to JSX, easy to integrate with frameworks like Meteor, ANgular etc. Using react, writing UI test cases become extremely easy.
+
+#### What is JSX?
+
+Shorthand for JavaScript XML. JSX makes application robust and boost its performance. They help in understanding HTML file really easy.
+
+```jsx
+render() {
+	return(
+		<div>
+		  <h1>Hi There! </h1>
+		</div>
+	);
+}
+```
+
+#### Why can't browser read JSX?
+
+Since JSX is not regular JavaScript object and browsers can read only JavaScript objects. Thus to make sure browser read JSX, we transform JSX file into JavaScript objects using jSX transformers like babel and then pass it to the browser.
+
+#### How different is ES6 from ES5?
+
+Syntax has changed in following aspects:
+
+```jsx
+/*1. require vs import */
+//ES5
+var React = require("react");
+//ES6
+import React from "react";
+
+/* 2. export vs exports */
+//ES5
+module.exports = Component;
+//ES6
+export default Component;
+
+/* 3. component vs function */
+//ES5
+var MyComponent = React.createClass({
+  render: function () {
+    return;
+    <h3>Hello family! </h3>;
+  },
+});
+
+//ES6
+class MyComponent extends React.Component {
+  render() {
+    return;
+    <h3>Hello Family! </h3>;
+  }
+}
+
+/* props */
+
+//ES5
+var App = React.createClass({
+  propTypes: { name: React.propTypes.string },
+  render: function () {
+    <h3>Hello, {this.props.name}!</h3>;
+  },
+});
+
+//ES6
+class App extends React.Component {
+  render() {
+    return;
+    <h3>Hello, {this.props.name}!</h3>;
+  }
+}
+
+/* state */
+
+// ES5
+var App = React.createClass({
+  getInitialState: function () {
+    return { name: "world" };
+  },
+  render: function () {
+    return;
+
+    <h3>Hello, {this.state.name}!</h3>;
+  },
+});
+
+// ES6
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = { name: "world" };
+  }
+  render() {
+    return;
+
+    <h3>Hello, {this.state.name}!</h3>;
+  }
+}
+```
+
+#### How Virtual DOM works?
+
+A virtual DOM is a lightweight JavaScript object which originally is just the copy of the real DOM. It is a node tree that lists the elements, their attributes and content as Objects and their properties.
+React’s render function creates a node tree out of the React components. It then updates this tree in response to the mutations in the data model which is caused by various actions done by the user or by the system.
+
+This Virtual DOM works in three simple steps:
+
+1. Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
+
+2. Then the difference between the previous DOM representation and the new one is calculated.
+
+3. Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
+
 ## What is ByteCode in Python?
 
 Let's understand how python runs our programs. Python is usually called an interpreted language, however, it combines compiling and interpreting. When we execute a source code(that is a .py file), python first compiles it into a bytecode. The bytecode is a low-level platform-independent representation of your source code, however, it is not the binary machine code and cannot be run by the target machine directly. In fact, it is a set of instructions for a virtual machine which is called the Python Virtual Machine(PVM). After compilition, the bytecode is sent for execution to the PVM. The PVM is an interpreter that runs the bytecode and is part of the python system. The bytecode is platform-independent. Here, CPython compiles the source code into the bytecode and then this bytecode is executed by the CPython virtual machine.
