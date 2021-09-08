@@ -229,6 +229,54 @@ ReactDOM.render(<MyComponent />, document.getElementById("content"));
 
 Arrow functions are brief syntax for writing the function expression. 'fat arrow(=>) the function'. These allow to bind the context of the components properly in ES6. Mostly used while working with higher order functions.
 
+#### What is React.createClass?
+
+React.createClass allows us to generate component "classes". But with ES6, React allows us to implement component classes that use ES6 JavaScript classes. The end result is the same -- we have a component class. But the style is different. And one is using "custom" JavaScript class system while the other is using "native" JavaScript class system. When using React's **createClass()** method, we pass in an object as an argument. So, we can write a component using **createClass** that looks like this:
+
+```jsx
+import React from "react";
+const Contacts = React.createClass({
+  render() {
+    return <div></div>;
+  },
+});
+export default Contacts;
+```
+
+#### Difference B/W Stateful and Stateless Components.
+
+Stores info about component's state change in memory. || Calculates the internal state of the components
+
+Have authority to change state. || Do not have authority to change state
+
+Contains info of past, current and possible future changes in state || Contains no such info as such
+
+Stateless components notify them about the requirements of the state change, then they send down props to them || They receive the props from the Stateful components and treat them as callback functions.
+
+#### Different phases of React component's lifecycle?
+
+1. Initial Rendering Phase: This is phase when the component is about to start its life journey and make its way to the DOM.
+
+2. Updating Phase: Once the component gets added to DOM, it can potentially update and re-render only when a prop or state change occurs.
+
+3. Unmounting Phase: This is the final phase of a computer's life cycle in which the component is destroyed and removed from the DOM.
+
+#### Lifecycle methods of React components
+
+**_componentWillMount( )_** - Executed just before rendering takes place both on client as well as server-side.
+
+**_componentDidMount( )_** - Executed on the client side only after the first render.
+
+**_componentWillReceiveProps( )_** - Invoked as soon as the props are received from the parent class and before another render is called.
+
+**_shouldComponentUpdate( )_** - Returns true or false value based on certain conditions. If want to update, return true else return false.
+
+**_componentWillUpdate( )_** - Called just before rendering takes placein DOM.
+
+**_componentDidUpdate( )_** - Called immediately after rendering takes place.
+
+**_componentWillUnmount( )_** - Called after the component is unmounted from the DOM. It is used to clear up the memory spaces.
+
 ## What is ByteCode in Python?
 
 Let's understand how python runs our programs. Python is usually called an interpreted language, however, it combines compiling and interpreting. When we execute a source code(that is a .py file), python first compiles it into a bytecode. The bytecode is a low-level platform-independent representation of your source code, however, it is not the binary machine code and cannot be run by the target machine directly. In fact, it is a set of instructions for a virtual machine which is called the Python Virtual Machine(PVM). After compilition, the bytecode is sent for execution to the PVM. The PVM is an interpreter that runs the bytecode and is part of the python system. The bytecode is platform-independent. Here, CPython compiles the source code into the bytecode and then this bytecode is executed by the CPython virtual machine.
