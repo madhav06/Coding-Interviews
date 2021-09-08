@@ -245,13 +245,17 @@ export default Contacts;
 
 #### Difference B/W Stateful and Stateless Components.
 
-Stores info about component's state change in memory. || Calculates the internal state of the components
+| Stores info about component's state change in memory. | Calculates the internal state of the components |
+| ----------------------------------------------------- | ----------------------------------------------- |
 
-Have authority to change state. || Do not have authority to change state
+| Have authority to change state. | Do not have authority to change state |
+| ------------------------------- | ------------------------------------- |
 
-Contains info of past, current and possible future changes in state || Contains no such info as such
+| Contains info of past, current and possible future changes in state | Contains no such info as such |
+| ------------------------------------------------------------------- | ----------------------------- |
 
-Stateless components notify them about the requirements of the state change, then they send down props to them || They receive the props from the Stateful components and treat them as callback functions.
+| Stateless components notify them about the requirements of the state change, then they send down props to them | They receive the props from the Stateful components and treat them as callback functions. |
+| -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 
 #### Different phases of React component's lifecycle?
 
