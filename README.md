@@ -281,6 +281,29 @@ export default Contacts;
 
 **_componentWillUnmount( )_** - Called after the component is unmounted from the DOM. It is used to clear up the memory spaces.
 
+#### What is constructor? and purpose for it?
+
+Constructor are used for:
+
+- Initializing values of - props and state
+- Binding event handler methods to an instance
+
+```jsx
+import React, { Component } from "react";
+class myComponent extends Component {
+  constructor(props) {
+    super(props);
+    // Don't call this.setState( ) here!
+    this.state = { counter: 0 };
+    this.handleClick = this.handleClick.bind(this);
+  }
+}
+```
+
+- Constructor is called only once in the complete lifecycle of a component.
+- Constructor is the only place where you should assign **this.state** directly. In Other React's Lifecycle methods, you should use **this.setState( )**.
+- If using constructor, you should call **super(props)** before any other statement. If you won't call **super(props)**, this.props will be undefined in the component, which can lead to bugs.
+
 ## What is ByteCode in Python?
 
 Let's understand how python runs our programs. Python is usually called an interpreted language, however, it combines compiling and interpreting. When we execute a source code(that is a .py file), python first compiles it into a bytecode. The bytecode is a low-level platform-independent representation of your source code, however, it is not the binary machine code and cannot be run by the target machine directly. In fact, it is a set of instructions for a virtual machine which is called the Python Virtual Machine(PVM). After compilition, the bytecode is sent for execution to the PVM. The PVM is an interpreter that runs the bytecode and is part of the python system. The bytecode is platform-independent. Here, CPython compiles the source code into the bytecode and then this bytecode is executed by the CPython virtual machine.
