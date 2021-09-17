@@ -229,6 +229,44 @@ ReactDOM.render(<MyComponent />, document.getElementById("content"));
 
 Arrow functions are brief syntax for writing the function expression. 'fat arrow(=>) the function'. These allow to bind the context of the components properly in ES6. Mostly used while working with higher order functions.
 
+#### what is React Fragment?
+
+It's a common pattern in React which is used for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM.
+
+```jsx
+render() {
+  return (
+    <React.Fragment>
+      <ChildA />
+      <ChildB />
+      <ChildC />
+    </React.Fragment>
+  )
+}
+
+```
+
+#### Why using Fragments is better Option over Divs?
+
+1. Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
+
+2. The DOM Inspector is less cluttered.
+
+#### What is lifecycle methods order in mounting?
+
+The lifecycle methods are called in the following order when an instance of component is being created.
+
+```jsx
+//constructor()
+//static getDerivedStateFromProps()
+//render()
+//componentDidMount()
+```
+
+#### Why should component names start with capital letter?
+
+If you are rendering your component using JSX, the name of that component has to begin with a capital letter otherwise React will throw an error as unrecognized tag.
+
 #### What is React.createClass?
 
 React.createClass allows us to generate component "classes". But with ES6, React allows us to implement component classes that use ES6 JavaScript classes. The end result is the same -- we have a component class. But the style is different. And one is using "custom" JavaScript class system while the other is using "native" JavaScript class system. When using React's **createClass()** method, we pass in an object as an argument. So, we can write a component using **createClass** that looks like this:
@@ -264,6 +302,10 @@ export default Contacts;
 2. Updating Phase: Once the component gets added to DOM, it can potentially update and re-render only when a prop or state change occurs.
 
 3. Unmounting Phase: This is the final phase of a computer's life cycle in which the component is destroyed and removed from the DOM.
+
+#### What is React Router?
+
+React Router is a powerful routing library built on top of React that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.
 
 #### Lifecycle methods of React components
 
@@ -304,31 +346,89 @@ class myComponent extends Component {
 - Constructor is the only place where you should assign **this.state** directly. In Other React's Lifecycle methods, you should use **this.setState( )**.
 - If using constructor, you should call **super(props)** before any other statement. If you won't call **super(props)**, this.props will be undefined in the component, which can lead to bugs.
 
-## What is ByteCode in Python?
+#### reducers in react?
+
+A reducer is a function that determines changes to an application's state. We have tools like Redux, that help manage an application's state change in a single store.
+
+#### Purpose of ContextAPI in react?
+
+If a child component at nth level require a property from a parent component at any level, the information needs to be passed one level by level through props. In an application with lot of nested components, it is difficult.
+
+Context API helps to directly send an information from a parent component to a child component at any level.
+
+#### Explain React Hooks?
+
+Hooks are built-in functions that allow developers to use state and lifecycle methods within component in React. Each component's lifecycle has 3 phases which are mount, unmount and update. Alongside, components have states and props So, Hooks allow developers to use these methods while improving code reuse across component tree.
+
+#### 2 Rules that must be followed using Hooks?
+
+1. Hooks should be called only at the Top Level. Shouldn't be called inside loops, nested functions or conditions.
+
+2. Hooks can only be called from React Function Component.
+
+#### Primary benefits of Hooks?
+
+Through Hooks, you can code in React without using classes. With Hooks, we can re-use exisiting states in our code. Can also help in tightly couple logic in the code.
+
+#### what is Redux?
+
+It is a conventional shape container for JavaScript apps and based on Flux design pattern.small and has no dependancies.
+
+#### Where Redux is used?
+
+Redux is majorly used in a mixture with reacting. Has capability to get used to other view libraries too. Angular, Vue can get mutual with Redux easily.
+
+#### Redux Thunk, Explain?
+
+Known as middleware
+
+#### What is redux-saga?
+
+Documentation that aims to make elevation effects in redux app easier.
+
+#### Main features of redux form?
+
+-- Justification (sync / async) and compliance.
+-- Field values determination via redux store.
+-- Formatting, normalization and parsing of field standards.
+
+#### Why we use force update in React?
+
+We use force update to power a re-render if there is some form, React is not detecting that requires a revision to UI.
+
+---
+
+## Backend questionnaire on Python, Django etc
+
+---
+
+#### What is ByteCode in Python?
 
 Let's understand how python runs our programs. Python is usually called an interpreted language, however, it combines compiling and interpreting. When we execute a source code(that is a .py file), python first compiles it into a bytecode. The bytecode is a low-level platform-independent representation of your source code, however, it is not the binary machine code and cannot be run by the target machine directly. In fact, it is a set of instructions for a virtual machine which is called the Python Virtual Machine(PVM). After compilition, the bytecode is sent for execution to the PVM. The PVM is an interpreter that runs the bytecode and is part of the python system. The bytecode is platform-independent. Here, CPython compiles the source code into the bytecode and then this bytecode is executed by the CPython virtual machine.
 
-## What is difference between SETS and TUPLES?
+#### What is difference between SETS and TUPLES?
 
 TUPLES are a datatype that stores values. SETS are another standard dtatype that also store values, The major difference is SETS, unlike TUPLES cannot have multiple occurances of the same element and store unordered values. Moreover, TUPLES are immutable while SETS are mutable.
 
-## What are python datatype?
+#### What are python datatype?
 
 Numeric(Integer, Float, COmplex number) type datatypes, Boolean(True, False) type datatypes, Sequence(String, List, Tuple) type datatypes, Dictionary type datatypes. So, mainly 6 std. datatypes: Numeric, String, List, Tuples, Boolean and Dictionary.
 
-## Why choose Python?
+#### Why choose Python?
 
 Less Code, Less Time, Less Money: Python typically involves less code, it also takes less time to complete a job. Thankfully for clients this also means less money. It allows developers to work quickly. 2.Utilized by World Leaders: World leading companies are increasingly choosing python. Of course, the vast majority of IT giants, including Google, Dropbox, Spotify are using it. Other industry giants as well choosing python as preferential language: NASA, Disney, Electronic Arts etc.
 Compatible: Python offers compatibility with various platforms and moreover, its free.
 Huge Libraries: There are a lot of libraries for Python. As a result, the developers can manage documentation, databases, web browsers, perform unit testing and so on. Additionally, Python can be used for many taks: web and desktop apps development, complex calculation systems, life support management systems, Internet of Things, games and more.
-Can we add items in tuples dynamically?
+
+#### Can we add items in tuples dynamically?
+
 Some tuples(that contain only immutable objects such as strings) are immutable and some other tuples(that contain one or more objects such as lists) are mutable. This is often debatable topic however tuples are immutable in general. You can't add elements to a tuple because of it's immutable property. There is no append() or extend() method for tuples. Similarly, You can't remove elements froma tuple because of it's immutable property. tuples have no remove() or pop() method.
 
-## Python supports compilition or NOT?
+#### Python supports compilition or NOT?
 
 Yes indeed compilation is a step in executing a souce code. Our source code is compiled into bytecode. CPython comiles our source code here.
 
-## What are Python arrays?
+#### What are Python arrays?
 
 Arrays in python are data structures that can hold multiple values of the same type. Often, they are misinterpreted as lists or Numpy Arrays. Technically, Arrays in Python are distinct from both these. An array is basically a data structures which can hold more than one value, an ordered series of the same type. Arrays are mutable so we can perform various manipulations as required.
 
@@ -336,11 +436,11 @@ Python Arrays and lists store values in a similar way.But, there is a key differ
 
 Arrays in python can be created after importing the array module as follows: import array as arr The array(data type, value list) function takes two parameters, the first being data type of the value stored, the second being the value list. There is another way to import: from array import\*
 
-## Explain object in Python?
+#### Explain object in Python?
 
 An object is an instance of a Class. An object consists of: State: Represented by attributes of an object. Also reflects the properties of an object. Behaviour: Represented by methods of an object. Also reflects the response of an object with other objects. Identity: Gives unique name to an object to interact with other objects.
 
-## Example of real-world class in Python?
+#### Example of real-world class in Python?
 
 ```Python3 {
   Class NITTirchy:
@@ -361,7 +461,7 @@ An object is an instance of a Class. An object consists of: State: Represented b
 }
 ```
 
-## Python supports polymorphism or NOT?
+#### Python supports polymorphism or NOT?
 
 Yes, Python support polymorphism. Polumorphism can be carried out through inheritance, with sub classes making use of base class methods or overriding them. Two types of polymorphism: --- Overloading --- Overriding
 
@@ -391,7 +491,7 @@ bf.swim()
 }
 ```
 
-## Does Python supports constructor?
+#### Does Python supports constructor?
 
 Constructors are generally used for instantiating an object. The task of constructors is to initialize to the data members of the class when an object of class is created. In Python the 'init()' method is called as constructor and is always called when an object is created.
 
@@ -482,38 +582,38 @@ obj.display()
 }
 ```
 
-## Where lambda operator will be used in Python3?
+#### Where lambda operator will be used in Python3?
 
 Lambda operator or lambda function is a way to create small anonymous functions, functions without a name. These functions are throw-away functions, they are needed where they have been created. They are mainly used in combination with the functions filter(), map() and reduce(). Lambda functions are syntactically restricted to a single expression.
 
-## Program to find average of numbers in a list.
+#### Program to find average of numbers in a list.
 
 Can you write a python program to find the average of numbers in a list?
 
-## Program to reverse a number in python.
+#### Program to reverse a number in python.
 
 Can you write a python program to reverse a number?
 
-## Program to find the sum of the digits of a number in python.
+#### Program to find the sum of the digits of a number in python.
 
 Can you write a program to find the sum of the digits of a number in python?
 
-## Program to check if a number is palindrome or not.
+#### Program to check if a number is palindrome or not.
 
 Can you write a program to check if a number is a palindrome or not.
 
-## Program to count the number of digits in a number.
+#### Program to count the number of digits in a number.
 
 Can you write a program to count the number of digits in a number?
 
-## Program to check if a number is a prime number.
+#### Program to check if a number is a prime number.
 
 Can you write a program to check if a number is a prime number?
 
 Prime Number: Prime numbers are whole numbers greater than 1, that have only two factors - 1 and number itself.
 first few prime numbers are: 2,3,5,7,11,13,17,19,23,29,31,37.
 
-## Program to check if a number is an armstrong number.
+#### Program to check if a number is an armstrong number.
 
 Can you write a program to check if a number is an armstrong number?
 
@@ -524,21 +624,21 @@ example: 0, 1, 153, 370, 371, 407
 371 = 3*3*3 + 7*7*7 + 1*1*1
 470 = 4*4*4 + 7*7*7 + 0*0*0
 
-## Program to check if a number is a perfect number.
+#### Program to check if a number is a perfect number.
 
 Can you write a program to check if a number is a perfect number?
 
 Perfect number: A positive integer that is equal to the sum of its proper divisors.
 example: 6, 28, 496, 8128 etc
 
-## Algorithms to solve before python coding round:
+#### Algorithms to solve before python coding round:
 
 "Knowing how to solve algorithms will give you a competitive advantage during job hunt".
 
 Please note that the solution I shared for each problem is just one of many patential solutions,
 That could be implemented and therefore feel free to code your own versions.
 
-Problem 1: Average Words Length
+**Problem 1: Average Words Length**
 
 ```Python3 {
 
@@ -560,7 +660,7 @@ Problem 1: Average Words Length
 }
 ```
 
-Probelm 2: Move Zeroes
+**Probelm 2: Move Zeroes**
 
 ```Python3 {
 
@@ -583,7 +683,7 @@ Probelm 2: Move Zeroes
 }
 ```
 
-Problem 3: Matched and Mismatched Words
+**Problem 3: Matched and Mismatched Words**
 
 ```Python3 {
 
@@ -607,7 +707,7 @@ Problem 3: Matched and Mismatched Words
 }
 ```
 
-Problem 4: Fill The Blanks
+**Problem 4: Fill The Blanks**
 
 ```Python3 {
 
@@ -634,7 +734,7 @@ Problem 4: Fill The Blanks
 }
 ```
 
-## Django Framework
+#### Django Framework
 
 #### What is Django framework ?
 
