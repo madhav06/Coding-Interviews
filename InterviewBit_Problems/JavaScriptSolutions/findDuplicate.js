@@ -1,4 +1,4 @@
-var s = {
+var sol = {
   findDuplicate: function (A) {
     var map = {};
     for (var i = 0; i < A.length; i++) {
@@ -12,4 +12,4 @@ var s = {
   },
 };
 
-console.log(s.findDuplicate([3, 4, 1, 4, 1]));
+console.log(sol.findDuplicate([3, 4, 1, 4, 1]));
